@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic&display=swap');
+
+/* 웹 브라우저 기본 스타일 시트 초기화, 구글 폰트 'Montserrat' 사용 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+/* 기준 너비를 유지, 1140px로 고정 // ↑ & ↓은 0, → & ←는 auto로 지정 => 수평 방향에서 중앙에 위치하도록 설정 */
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* 헤더를 상단에 고정하기 위해 position 속성값을 fixed로 지정 // 스크롤했을 때 다른 요소 밑에 가려져 안보일 수 있기 때문에 z-index 속성값을 0보다 크게 설정 */
+header {
+  position: fixed;
+  color: white;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* 가로로 한 줄 배치하도록 display 속성을 flex로 지정 // space-between은 하위 자식 태그가 각각 왼쪽 끝과 오른쪽 끝에 위치하도록 만듬 // 수직 정렬을 위해 align-items 속성값을 center로 지정*/
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* 메뉴 수평으로 배치, 내부 여백, 글꼴 크기 지정 */
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  padding: 30px;
+}
+
+header button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+header h1 button {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+header nav ul li button {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+}
+
+a, a:link, a:visited {
+    color: inherit;
+    font-size: larger;
+    text-decoration: none;
+}
+  li {
+    list-style: none;
+  }
+
+/* -----header part----- */
+
+.home {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-image: url('img/1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home h4 {
+  font-size: 2rem;
+}
+
+.home h2 {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+}
+
+.home h2 span::after {
+  content: "";
+  height: 40px;
+  width: 3px;
+  background-color: #fff;
+  display: inline-block;
+  animation: blink .9s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.home p {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+  .about{
+    padding: 13rem 0;
+    background-color: black;
+    color: white;
+  }
+  .about::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .about .title{
+    margin-bottom: 3rem;
+  }
+  .about .title h2 {
+    font-size: 3.5rem;
+  }
+  .about-self .profile .left img {
+    width: 400px;
+    height: 400px;
+    float: left;
+  }
+  .about-self .right {
+    width: 60%;
+    float: right;
+    padding: 0 2rem;
+    background-color: black;
+    color: white;
+  }
+  .about-self .right h3 {
+    font-size: 2.25rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-self .right p {
+    font-size: 1.15rem;
+    margin: 1rem 0;
+  }
+  
+  .about-self .right .social a {
+    font-size: 2.5rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  .like {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .like .div {
+    background-color: black;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+  }
+  .like .text-wrapper {
+    position: absolute;
+    top: 85px;
+    left: 76px;
+    font-weight: 800;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .like .overlap {
+    position: absolute;
+    width: 1810px;
+    height: 811px;
+    top: 210px;
+    left: 50px;
+  }
+  .like .animation {
+    position: absolute;
+    width: 486px;
+    height: 568px;
+    top: 2px;
+    left: 19px;
+  }
+  .like .element {
+    position: absolute;
+    width: 484px;
+    height: 501px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .like .text-wrapper-2 {
+    position: absolute;
+    top: 524px;
+    left: 129px;
+    font-weight: 900;
+    color: white;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .like .overlap-group {
+    position: absolute;
+    width: 1810px;
+    height: 811px;
+    top: 0;
+    left: 0;
+  }
+  .like .travel {
+    position: absolute;
+    width: 528px;
+    height: 732px;
+    top: 0;
+    left: 656px;
+  }
+  .like .rectangle {
+    width: 526px;
+    height: 666px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .like .text-wrapper-3 {
+    position: absolute;
+    top: 688px;
+    left: 189px;
+    font-weight: 900;
+    color: white;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .like .rain {
+    position: absolute;
+    width: 497px;
+    height: 591px;
+    top: 0;
+    left: 1313px;
+  }
+  .like .text-wrapper-4 {
+    position: absolute;
+    width: 293px;
+    top: 539px;
+    left: 130px;
+    font-weight: 900;
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .like .img {
+    position: absolute;
+    width: 495px;
+    height: 515px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .contact {
+    padding: 8rem 0;
+    background-color: black;
+    color: white;
+  }
+  .contact .title {
+    margin-bottom: 3rem;
+  }
+  .contact .title h2{
+    font-size: 3.5rem;
+  }
+  .contact .contact-me::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .contact .contact-me .left {
+    width: 30%;
+    float: left;
+  }
+  .contact .contact-me .left .card{
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;
+  }
+  .contact .contact-me .left .card .icon i{
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+  .contact .contact-me .right {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+  .contact .contact-me .right .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .contact .contact-me .right .form-group label {
+    display: block;
+    margin-bottom: 0.85rem;
+  }
+  .contact .contact-me .right .form-group input {
+    padding: 0.625rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  .contact .contact-me .right .form-group input:focus {
+    border: 1px solid #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+  }
+  .contact .contact-me .right .form-group textarea{
+    height: 300px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  .contact .contact-me .right .form-group textarea:focus{
+    outline: none;
+    border: 1px solid #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+  }
+  .contact .contact-me .right button{
+    width: 100%;
+    padding: 1rem;
+    background-color: #f78b00;
+    border: none;
+    color: white;
+  }
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
